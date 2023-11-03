@@ -1,0 +1,8 @@
+---
+- name: Playbook to jenkins setup
+  hosts: ec2
+  become: true
+  gather_facts: yes
+  
+  roles:
+    - install_gitlab

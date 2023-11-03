@@ -1,0 +1,8 @@
+---
+- name: Playbook to sorna quobe setup
+  hosts: ec2
+  become: true
+  gather_facts: yes
+  
+  roles:
+    - sorna-quobe_setup

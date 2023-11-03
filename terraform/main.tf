@@ -44,7 +44,7 @@ resource "aws_security_group" "instance_sg" {
 
 # Launch an EC2 instance in the existing subnet
 resource "aws_instance" "app_server" {
-  count         = 2
+  count         = 1
   ami           = "ami-026ebd4cfe2c043b2"
   instance_type = "t2.micro"
   subnet_id     = data.aws_subnet.existing_subnet.id
