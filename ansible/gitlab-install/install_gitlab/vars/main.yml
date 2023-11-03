@@ -1,2 +1,3 @@
 ---
 # vars file 
+gitlab_edition: 'community'
