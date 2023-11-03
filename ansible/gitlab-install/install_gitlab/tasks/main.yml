@@ -1,7 +1,7 @@
 ---
 - name: set vars for community edition
   ansible.builtin.include_tasks:
-    file: set-ce-edition.yml
+    file: set-ee-edition.yml
   when:
     - gitlab_edition == 'community'
 - name: set vars for enterprise edition
