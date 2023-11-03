@@ -1,0 +1,5 @@
+---
+# tasks file for install the java`
+- name: install java-openjdk17
+  shell:
+      sudo dnf install java-17-openjdk -y
