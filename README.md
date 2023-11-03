@@ -1,3 +1,6 @@
+rhel 9 - install AWS
+AMI-AWS: ami-026ebd4cfe2c043b2
+
 
 terraform command
 terraform apply -f ~/AWS-toolchain-install/terraform/main.tf
