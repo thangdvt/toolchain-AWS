@@ -26,7 +26,7 @@ data "aws_subnet" "existing_subnet" {
 
 # Create a security group for your EC2 instance
 resource "aws_security_group" "instance_sg" {
-  name        = "instance-sg"
+  name        = "gitlab-install-toolchain"
   description = "Security group for the EC2 instance"
   vpc_id      = data.aws_vpc.existing_vpc.id
 
