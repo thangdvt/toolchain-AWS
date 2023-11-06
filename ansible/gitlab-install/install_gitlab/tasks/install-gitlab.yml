@@ -8,5 +8,5 @@
   notify:
     - setup_api_token
 - name: set user root with pass word {{ gitlab_admin_password }}
-  shell:
+  shell: >
       gitlab-rails runner "User.create(username: 'root', email: 'root@gmail.com', password: '{{ gitlab_admin_password }}')"
