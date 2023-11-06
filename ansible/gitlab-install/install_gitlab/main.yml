@@ -2,5 +2,11 @@
 - name: install gitlab
   hosts:
     - all
+  vars:
+    ansible_user: 'admin'
+    ansible_password: 'Admin@123'
+    ansible_become: yes
+    ansible_become_password: 'Admin@123'
+    gitlab_admin_password: 'Admin@123'
   roles:
     - roles/install_gitlab
