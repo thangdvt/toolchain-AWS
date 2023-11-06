@@ -3,7 +3,10 @@
   ansible.builtin.yum:
     name: "{{ gitlab_package }}"
   environment:
-    EXTERNAL_URL: "https://gitlab-test.com"
-    GITLAB_ROOT_PASSWORD: "admin@123"
+    EXTERNAL_URL: "https://{{ inventory_hostname }}"
+    GITLAB_ROOT_PASSWORD: "{{ gitlab_admin_password }}"
   notify:
     - setup_api_token
+- name: set user root with pass word {{ gitlab_admin_password }}
+  shell:
+      gitlab-rails runner "User.create(username: 'root', email: 'root@gmail.com', password: '{{ gitlab_admin_password }}')"
