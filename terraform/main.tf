@@ -46,7 +46,7 @@ resource "aws_security_group" "instance_sg" {
 resource "aws_instance" "app_server" {
   count         = 1
   ami           = "ami-026ebd4cfe2c043b2"
-  instance_type = "t2.micro"
+  instance_type = "t2.large"
   subnet_id     = data.aws_subnet.existing_subnet.id
   key_name      = "thangdv38-rsa256"  # Customize with your key pair name
 
@@ -54,6 +54,6 @@ resource "aws_instance" "app_server" {
   vpc_security_group_ids = [aws_security_group.instance_sg.id]
 
   tags = {
-    Name = "rhel9-instance-${count.index + 1}"
+    Name = "gitlab-install-toolchain-${count.index + 1}"
   }
 }
