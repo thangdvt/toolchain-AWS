@@ -1,8 +1,8 @@
 ---
 # vars file 
 gitlab_edition: 'community'
-ansible_user: 'admin'
-ansible_password: 'Admin@123'
-ansible_become: yes
-ansible_become_password: 'Admin@123'
+#ansible_user: 'admin'
+#ansible_password: 'Admin@123'
+#ansible_become: yes
+#ansible_become_password: 'Admin@123'
 gitlab_admin_password: 'Admin@123'
